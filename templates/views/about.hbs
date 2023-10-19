@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{>headerLinks}}
+    </head>
+
+    <body>
+        {{!-- header start --}}
+        {{>header}}
+        {{!-- header end --}}
+        {{!-- about start --}}
+        <div class="container-fluid main_header">
+            <div class="row">
+                <div class="col-md-10 col-12 mx-auto">
+                    <div class="row">
+                        <!-- left hand side -->
+                        <div class="col-md-6 col-12 main_header_right">
+                            <figure>
+                                <img src="images/aboutme.svg" alt="about" height="350" width="100%">
+                            </figure>
+                        </div>
+                        <!-- right hand side -->
+                        <div class="col-md-6 col-12 main_header_left">
+                            <p>Welcome to weather app</p>
+                            <h1>I am A <span>Front-End</span> Developer and <span>UI/UX</span> Designer</h1>
+                            <a href="/about">
+                                <button>About Me</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- about end --}}
+        {{!-- footer start --}}
+        {{>footer}}
+        {{!-- footer end --}}
+    </body>
+
+</html

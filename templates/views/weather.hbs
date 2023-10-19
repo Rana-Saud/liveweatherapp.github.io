@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{>headerLinks}}
+    </head>
+
+    <body>
+        {{!-- header start --}}
+        {{>header}}
+        {{!-- header end --}}
+        {{!-- about start --}}
+        <div class="container-fluid main_header">
+            <div class="row">
+                <div class="col-md-10 col-12 mx-auto">
+                    <div class="main_content">
+                        <form class="temp_form">
+                            <input type="text" id="searchCityName" placeholder="Enter Your City Name"
+                                autocomplete="off">
+                            <input type="submit" value="Serach" id="submitBtn">
+                        </form>
+                    </div>
+                    <div class="tempInformation">
+                        <div class="top_layer">
+                            <p id="day">Tuesday</p>
+                            <p id="today_date">7 AUG</p>
+                        </div>
+                        <div class="main_layer">
+                            <div class="left-side">
+                                <p id="city_name">Go Output Here</p>
+                                <div class="middle_layer data_hide" id="middle_layer">
+                                    <p><span id="temp">0</span>&degC</p>
+                                    <p id="temp_status">
+                                        <i class="fa fa-cloud" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="left-side">
+                                <div class="weather__info data_hide" id="weather__info">
+                                    <div class="weather__card">
+                                        <i class="fa-solid fa-temperature-full"></i>
+                                        <div>
+                                            <p>Feel Like</p>
+                                            <p class="weather__realfeel" id="feel"></p>
+                                        </div>
+                                    </div>
+                                    <div class="weather__card">
+                                        <i class="fa-solid fa-droplet"></i>
+                                        <div>
+                                            <p>Humidity</p>
+                                            <p class="weather__humidity" id="humidity"></p>
+                                        </div>
+                                    </div>
+                                    <div class="weather__card">
+                                        <i class="fa-solid fa-wind"></i>
+                                        <div>
+                                            <p>Wind</p>
+                                            <p class="weather__wind" id="wind"></p>
+                                        </div>
+                                    </div>
+                                    <div class="weather__card">
+                                        <i class="fa-solid fa-gauge-high"></i>
+                                        <div>
+                                            <p>Pressure</p>
+                                            <p class="weather__pressure" id="pressure"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- about end --}}
+        {{!-- footer start --}}
+        {{>footer}}
+        {{!-- footer end --}}
+
+        <script>
+            const day = document.getElementById('day');
+            const today_date = document.getElementById('today_date');
+
+            const getCurrentDay = () => {
+                let weekDay = new Array(7);
+                weekDay[0] = "Sunday";
+                weekDay[1] = "Monday";
+                weekDay[2] = "Tuesday";
+                weekDay[3] = "Wednesday";
+                weekDay[4] = "Thursday";
+                weekDay[5] = "Friday";
+                weekDay[6] = "Saturday";
+
+                let currentDay = new Date();
+                let dayVal = weekDay[currentDay.getDay() + 1];
+                day.innerHTML = dayVal;
+            }
+
+            getCurrentDay();
+
+            const getCurrentDate = () => {
+                let weekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+                let months = [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "June",
+                    "July",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
+                ];
+
+                let currentMonth = new Date();
+                let month = months[currentMonth.getMonth()];
+                let day = currentMonth.getDate();
+
+                let curMonth = `${day} ${month}`;
+                return `${curMonth}`;
+            };
+
+            today_date.innerHTML = getCurrentDate();
+
+        </script>
+    </body>
+
+</html>

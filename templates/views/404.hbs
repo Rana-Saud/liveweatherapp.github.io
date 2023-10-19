@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{>headerLinks}}
+    </head>
+
+    <body>
+        {{!-- header start --}}
+        {{>header}}
+        {{!-- header end --}}
+        {{!-- about start --}}
+        <div class="container-fluid main_header">
+            <div class="row">
+                <div class="col-md-10 col-12 mx-auto">
+                    <div class="row">
+                        <!-- left hand side -->
+                        <div class="col-12 main_header_left align-items-center">
+                            <figure class="errorImg">
+                                <img src="images/404.svg" alt="about" class="img-fluid">
+                            </figure>
+                            <!-- right hand side -->
+                            <p>Welcome to weather app</p>
+                            <h1><span>Opps! </span>{{errorMsg}}</h1>
+                            <a href="/">
+                                <button>Go Back</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- about end --}}
+        {{!-- footer start --}}
+        {{>footer}}
+        {{!-- footer end --}}
+    </body>
+
+</html>
