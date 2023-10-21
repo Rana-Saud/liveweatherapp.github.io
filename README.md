@@ -6,7 +6,8 @@ The app has three pages:
 
 - Home page: This page displays a brief introduction to the app.
 - Weather page: This page allows users to search for a city and view the current weather conditions for that city.
-- About page: This page provides information about the app's development.
+- About page: This page provides information about website creator.
+
 ## Development
 This app was developed using technologies:
 - Node.js 
