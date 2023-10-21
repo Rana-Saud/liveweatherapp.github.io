@@ -31,7 +31,7 @@ To install the app run the following commands:
 #### 2. Clone this repository:
 
 ```bash
- git clone https://github.com/Rana-Saud/liveweatherapp.git
+ git clone https://github.com/Rana-Saud/liveweatherapp.github.io.git
 ```
 
 #### 3. Run command prompt in the folder and run this cammand to install all dependencies:
