@@ -1,15 +1,29 @@
 
 # Weather App
 
+#### Video Demo:  https://drive.google.com/file/d/1mjXxW5gCZLx45EIfwAuy8nc5_CGcjQI9/view
+#### Description:
+
 This is a simple weather app that uses the OpenWeatherMap API to get weather data for a given city. 
 The app has three pages:
 
-- Home page: This page displays a brief introduction to the app.
-- Weather page: This page allows users to search for a city and view the current weather conditions for that city.
-- About page: This page provides information about website creator.
+- **Home page**: This page displays a brief introduction to the app.
+- **Weather page**: This page allows users to search for a city and view the current weather conditions for that city, including temperature, pressure, wind speed, feels like temperature, and humidity.y.
+- **About page**: This page provides information about the app's development.
+
+## Features
+- Displays the current weather conditions for a given city, including temperature, pressure, wind speed and direction, feels like temperature, and humidity.
+- Allows users to search for a city by name.
+- Provides a brief introduction to the app on the home page.
+- Provides information about the app's creator on the about page.
+
+## Use cases
+- Users can use this app to quickly check the weather conditions for their current location or for a city that they are planning to visit.
+- Users can use this app to get a more detailed understanding of the weather conditions in a particular area, such as the wind speed and direction.
+- Users can use this app to plan their activities for the day, such as whether to dress warmly or bring an umbrella.
 
 ## Development
-This app was developed using technologies:
+This app was developed using the following technologies:
 - Node.js 
 - Express.js
 - Handlebars 
@@ -18,40 +32,21 @@ This app was developed using technologies:
 
 The OpenWeatherMap API was used to get weather data.
 
+## Deployment 
 
-## Deployment
+To deploy this app, you will need to have Node.js installed on your machine. Once you have Node.js installed, you can clone this repository and run the following commands to install the dependencies and start the app:
 
-To install the app run the following commands:
+`git clone https://github.com/Rana-Saud/liveweatherapp.github.io.git`
 
-#### 1. Check that you have Node version:
+`cd Rana-Saud`
 
-```bash
-  node -v
-```
+`npm install`
 
-#### 2. Clone this repository:
-
-```bash
- git clone https://github.com/Rana-Saud/liveweatherapp.github.io.git
-```
-
-#### 3. Run command prompt in the folder and run this cammand to install all dependencies:
-
-```bash
-  npm install
-```
-#### 4. Once installed run this command:
-
-```bash
-  npm run start
-```
-
+`npm run start`
 
 The app will then be available at `localhost:3000`.
 
-You are ready to go ⛳!
-
-# Usage
+## Usage
 
 To use the app, visit the home page and click the "Weather" link. You will then be prompted to enter a city name. After entering a city name, click the "Search" button.
 
@@ -68,12 +63,12 @@ If the city name is invalid, a message will be displayed that says "Plz Enter Ci
 
 ## API Reference
 
-#### Get all cities weather data
+The OpenWeatherMap API was used to get weather data for this app. The following is a sample GET request to the OpenWeatherMap API:
 
 ```http
-  GET `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=c3290a02dcee5c751182701b7435f1dd&units=metric`
+https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=c3290a02dcee5c751182701b7435f1dd&units=metric
 ```
-
+The `q` parameter is the name of the city whose weather you want to check. The `appid` parameter is your OpenWeatherMap API key. The `units` parameter is the units in which you want the weather data to be returned.
 
 ## Tech Stack
 
